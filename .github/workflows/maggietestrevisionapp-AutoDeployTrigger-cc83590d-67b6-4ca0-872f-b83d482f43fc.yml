@@ -32,13 +32,14 @@ jobs:
           | grep -x "aspnetapp" || { echo "::error::ACR 找不到 tag aspnetapp"; exit 1; }
 
       - name: Deploy existing image to Container App
-        uses: azure/container-apps-deploy-action@v2
+        uses: azure/container-apps-deploy-action@v1
         with:
           resourceGroup: maggiehou-containerapp
           containerAppName: maggietestrevisionapp
-          imageToDeploy: maggieacr.azurecr.io/dotnet/samples:latest2
+          imageToDeploy: maggieacr.azurecr.io/dotnet/samples:latest3
           registryUrl: maggieacr.azurecr.io
           registryUsername: ${{ secrets.MAGGIETESTREVISIONAPP_REGISTRY_USERNAME }}
           registryPassword: ${{ secrets.MAGGIETESTREVISIONAPP_REGISTRY_PASSWORD }}
+
 
 
