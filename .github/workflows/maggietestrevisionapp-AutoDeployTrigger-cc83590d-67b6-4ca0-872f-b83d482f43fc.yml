@@ -36,8 +36,9 @@ jobs:
         with:
           resourceGroup: maggiehou-containerapp
           containerAppName: maggietestrevisionapp
-          imageToDeploy: maggieacr.azurecr.io/dotnet/samples:latest
+          imageToDeploy: maggieacr.azurecr.io/dotnet/samples:latest2
           registryUrl: maggieacr.azurecr.io
           registryUsername: ${{ secrets.MAGGIETESTREVISIONAPP_REGISTRY_USERNAME }}
           registryPassword: ${{ secrets.MAGGIETESTREVISIONAPP_REGISTRY_PASSWORD }}
+
 
