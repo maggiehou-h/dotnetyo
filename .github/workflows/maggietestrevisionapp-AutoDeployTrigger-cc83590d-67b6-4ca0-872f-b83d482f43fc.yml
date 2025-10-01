@@ -33,7 +33,7 @@ jobs:
           containerAppName: maggietestrevisionapp
 
           # ★ 這裡改成你要部署的映像（建議用唯一 tag，如 commit SHA）
-          imageToDeploy: maggieacr.azurecr.io/maggietestrevisionapp:${{ github.sha }}
+          imageToDeploy: maggieacr.azurecr.io/maggieacr.azurecr.io/dotnet/samples:aspnetapp
 
           # 若你的 Container App 尚未綁定 ACR 拉取權限，先用帳密讓動作幫你設好（第一次常用）
           registryUrl: maggieacr.azurecr.io
@@ -42,3 +42,4 @@ jobs:
 
           # （可選）若要同時套用 ingress/port/env/scale 等設定，可加：
           # yamlConfigPath: ./containerapp.yaml
+
